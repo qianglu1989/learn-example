@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: learn-pure
+server:
+  port: 6080
+

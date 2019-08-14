@@ -3,7 +3,7 @@
 	<springProperty scope="context" name="LOG_HOME" source="log.home" defaultValue="/tmp/logs/"/>
 	<springProperty scope="context" name="LOG_ROOT_LEVEL" source="log.level" defaultValue="INFO"/>
 	<springProperty scope="context" name="STDOUT" source="log.stdout" defaultValue="STDOUT"/>
-	<springProperty scope="context" name="APPNAME" source="spring.application.name" defaultValue="agent"/>
+	<springProperty scope="context" name="APPNAME" source="spring.application.name" defaultValue="pure"/>
 	<springProperty scope="context" name="IP" source="spring.cloud.client.ipAddress" />
 
 	<property name="LOG_PREFIX" value="${APPNAME}" />
