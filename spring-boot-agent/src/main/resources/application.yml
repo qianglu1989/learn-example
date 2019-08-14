@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: learn-agent
+server:
+  port: 6080
+
