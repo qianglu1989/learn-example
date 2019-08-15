@@ -1,16 +1,17 @@
 package com.qianglu.agent;
 
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import com.qianglu.agent.service.DumpClassesService;
+
+import java.lang.instrument.Instrumentation;
 
 /**
  * @author qianglu
  */
-@SpringBootApplication
 public class AgentStartup {
 
-	public static void main(String[] args) {
-		SpringApplication.run(AgentStartup.class, args);
-	}
+	public static void premain(String arg, Instrumentation instrumentation) {
+		System.err.println("agent startup , args is " + arg);
+		// 注册我们的文件下载函数
+		instrumentation.addTransformer(new DumpClassesService());	}
 }
